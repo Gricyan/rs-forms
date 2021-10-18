@@ -4,15 +4,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>FORMS</title>
 </head>
 <body>
-   <form action=""></form>
-   Please, register to Telegram
+  <form class="telegram-form" action="result">
+  <legend>Please, register to Telegram</legend>
+   
+  <fieldset class="questions">  
+    <label for="name-input">Enter Name</label>
+    <input type="text" name="" id="name-input" required>
 
-   <label for="name-input">Enter Name</label>
-   <input type="text" name="" id="name-input">
+    <label for="email-input">Enter Email</label>
+    <input type="email" name="" id="email-input" required>
 
+    <label for="password-input">Enter Password</label>
+    <input type="password" name="" id="password-input" required>
+
+    <label for="confirm-password-input">Confirm Password</label>
+    <input type="password" name="" id="confirm-password-input" required>
+
+    <label for="country-select">Select your country</label>
+    <select type="select" name="" id="country-select"><!-- size="3" multiple="true" -->
+      <option value="by">Belarus</option>
+      <option value="ru">Russia</option>
+      <option value="uk">Ukraine</option>
+      <option value="ek">United Kingdom</option>
+      <option value="us">USA</option>
+    </select>
+
+    <label for="language-select">Select language</label>
+    <input list="languages" id="language-select">
+      <datalist id="languages"> 
+        <option value="Russian">
+        <option value="English">
+      </datalist>
+    </input>
+
+    <label for="color-input">Select background color</label>
+    <input type="color" name="" id="color-input">
+
+    <input type="checkbox" name="" id="accept" required>
+    <label for="accept">Accept terms and services</label>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </fieldset>
+
+   <!-- other variant to make submit button <input type="submit" value="SUBMIT"> -->
+  </form>
   <script src="script.js"></script>
 </body>
 </html>
