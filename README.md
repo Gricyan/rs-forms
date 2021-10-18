@@ -1,2 +1,2 @@
 # rs-forms
-lLearning forms with rs school
+Learning forms with rs school
