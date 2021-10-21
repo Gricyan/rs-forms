@@ -50,3 +50,46 @@ PSWD_INPUT.addEventListener("focus", (event) => {
 PSWD_INPUT.addEventListener("blur", (event) => {
   event.target.classList.remove("focused");
 });
+
+
+/* for one eye
+
+const PSWD_EYE_BTN = document.getElementById("eye");
+const PSWD_EYE_SLASH_BTN = document.getElementById("eye-slash");
+
+PSWD_EYE_SLASH_BTN.addEventListener("click", (event) => {
+  const BTN = event.target;
+  BTN.classList.add("hidden");
+  PSWD_EYE_BTN.classList.remove("hidden");
+  PSWD_INPUT.type = "text";
+});
+
+PSWD_EYE_BTN.addEventListener("click", (event) => {
+  const BTN = event.target;
+  BTN.classList.add("hidden");
+  PSWD_EYE_SLASH_BTN.classList.remove("hidden");
+  PSWD_INPUT.type = "password";
+});
+
+*/
+
+const PSWD_EYE_BTNS = document.querySelectorAll(".eye");
+const PSWD_EYE_SLASH_BTNS = document.querySelectorAll(".eye-slash");
+
+PSWD_EYE_SLASH_BTNS.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const BTN = event.target;
+    BTN.classList.add("hidden");
+    BTN.parentElement.querySelector(".eye").classList.remove("hidden");
+    BTN.parentElement.querySelector(".password").type = "text";
+  });
+});
+
+PSWD_EYE_BTNS.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const BTN = event.target;
+    BTN.classList.add("hidden");
+    BTN.parentElement.querySelector(".eye-slash").classList.remove("hidden");
+    BTN.parentElement.querySelector(".password").type = "password";
+  });
+});
