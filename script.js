@@ -6,7 +6,7 @@ const RESULT =  document.getElementById("result");
 
 const checkPasswordParametrs = () => {
   if(PSWD_INPUT.value !== CONF_PSWD_INPUT.value) {
-    RESULT.innerHTML = "Wrong password"
+    RESULT.innerHTML = "Wrong password";
     return false;
   }
 
@@ -25,9 +25,17 @@ FORM.addEventListener("submit", (event) => {
 
   const isValid = checkPasswordParametrs();
 
-  if (isValid) {
-    RESULT.innerHTML = "Success!"
+  if (!isValid) {
+    RESULT.innerHTML = "Password input is incorrect";
+    return;
   }
+
+  const SURVEY = `<p>Name: ${document.getElementById("name-input").value}</p>
+                  <p>Email: ${document.getElementById("email-input").value}</p>
+                  <p>Country: ${document.getElementById("country-select").value}</p>
+                  <p>Language: ${document.getElementById("language-select").value}</p>
+                  <p>Chat background: <span style="height: 14px;width: 14px;background: ${document.getElementById("color-input").value};display: inline-block;"></span></p>`
+  RESULT.innerHTML = "Success!" + SURVEY;
 });
 
 PSWD_INPUT.addEventListener("change", (event) => {
