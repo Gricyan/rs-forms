@@ -44,6 +44,7 @@ input[type="checkbox"] {
 .eye, .eye-slash {
   position: absolute;
   padding: 4px;
+  top: 0;
   right: 0;
   width: 18px;
 }
