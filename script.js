@@ -51,6 +51,8 @@ PSWD_INPUT.addEventListener("change", (event) => {
   }
 });
 
+FORM.addEventListener("reset", (event) => RESULT.innerHTML = '' );
+
 PSWD_INPUT.addEventListener("focus", (event) => {
   event.target.classList.add("focused");
 });
